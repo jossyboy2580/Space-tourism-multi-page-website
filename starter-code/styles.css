@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background: url(/starter-code/assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow';
+}
+
+nav {
+    padding: 40px 0 40px 55px;
+    display: grid;
+    grid-template-columns: 43% 57%;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .09);
+    filter: 150px;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list li:hover {
+    border-bottom-color: white;
+}
+
+.nav-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    flex: 1;
+    justify-content: space-around;
+    display: flex;
+    padding: 0 130px;
+    gap: 450px;
+    align-items: center;
+}
+
+.left-section .tagline {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+h1.main-title {
+    font-size: 150px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+p.details {
+    font-size: 18px;
+}
+
+.call-to-action {
+    margin-top: 90px;
+    min-height: 200px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: black;
+    background: white;
+    font-size: 32px;
+    font-family: Barlow;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+
+/* Styles for the crew pages */
+
+section.crew-section {
+    /* background-color: blueviolet; */
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    padding: 0;
+}
+
+.crew-section .left-section,
+.crew-section .right-section {
+    background-color: blue;
+    flex: 1;
+}
+
+.crew-section .right-section img {
+    max-height: 100%;
+}
