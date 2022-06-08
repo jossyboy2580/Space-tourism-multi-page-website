@@ -94,7 +94,7 @@ header nav .nav-list a {
 }
 
 header nav .nav-list a:hover {
-    border-color: white;
+    border-color: #aaa;
 }
 
 header nav .nav-list a .number {
@@ -117,11 +117,15 @@ header nav .nav-list a .number {
 
 .home-page section {
     flex: 1;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
     padding: 0 130px;
-    gap: 450px;
+    /* gap: 450px; */
     align-items: center;
+}
+
+.left-section {
+    width: 40%
 }
 
 .left-section .tagline {
@@ -153,6 +157,13 @@ p.details {
     font-family: Barlow;
     text-transform: uppercase;
     user-select: none;
+}
+
+@media (max-width: 768px) {
+    .home-page section {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 
@@ -211,12 +222,16 @@ main>* {
     border-radius: 50%;
 }
 
+.info-section .active {
+    background-color: white !important;
+}
+
 .info-section .indicate:hover {
-    background-color: white;
+    background-color: #aaa;
 }
 
 .crew-page .image {
-    background: url(/starter-code/assets/crew/image-anousheh-ansari.webp) no-repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
 }
@@ -266,7 +281,7 @@ section>* img {
 }
 
 .tabbed-details .tabs li:hover {
-    border-color: white;
+    border-color: #aaa;
 }
 
 .item-display .destination-name {
@@ -331,7 +346,17 @@ section>* img {
     justify-content: center;
     padding: 10px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.left-side .counter .count:hover {
+    border-color: #aaa;
+}
+
+.left-side .counter .active {
+    background-color: white;
+    color: black;
 }
 
 .left-side .tag {
@@ -346,7 +371,7 @@ section>* img {
 
 .right-side {
     width: 40%;
-    background: url("/starter-code/assets/technology/image-space-capsule-portrait.jpg") no-repeat;
+    background-repeat: no-repeat;
     background-position: right center;
     background-size: 80%;
 }
