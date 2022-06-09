@@ -101,6 +101,46 @@ header nav .nav-list a .number {
     font-weight: bold;
 }
 
+.mobile-nav-icon {
+    display: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    width: 60%;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgb(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    padding: 170px 10px 20px 20px;
+}
+
+.mobile-nav .mobile-nav-list {
+    list-style: none;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.mobile-nav .mobile-nav-list li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav .mobile-nav-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.mobile-nav .mobile-nav-icon-close {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 .page-identifier {
     margin-left: 100px;
     /* margin-bottom: 90px; */
@@ -159,10 +199,62 @@ p.details {
     user-select: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+    .home-page {
+        background: url(/starter-code/assets/home/background-home-tablet.jpg) no-repeat;
+    }
+    header .line hr {
+        display: none;
+    }
+    header nav {
+        font-size: 14px;
+    }
     .home-page section {
+        /* padding-block: 40px; */
         flex-direction: column;
         justify-content: center;
+    }
+    .left-section {
+        text-align: center;
+        width: 100%;
+    }
+    .left-section .tagline {
+        font-size: 22px;
+    }
+    h1.main-title {
+        margin-block: 25px;
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 710px) {
+    body {
+        font-size: 8px;
+    }
+    .home-page {
+        background-image: url(/starter-code/assets/home/background-home-mobile.jpg);
+    }
+    .left-section {
+        font-size: 8px;
+        width: 100%;
+    }
+    .home-page section {
+        padding: none;
+        display: block;
+        margin: none;
+    }
+    header nav {
+        display: none;
+    }
+    .mobile-nav.show {
+        display: block;
+    }
+    .mobile-nav.hide {
+        display: none;
+    }
+    .mobile-nav-icon {
+        display: block;
+        margin-right: 40px;
     }
 }
 
